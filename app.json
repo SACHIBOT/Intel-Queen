@@ -1,8 +1,8 @@
 {
-  "name": "Intel-Queen",
+  "name": "Secktor-Md",
   "description": "A Whatsapp md bot built in NodeJs to make experience better",
-  "logo": "https://raw.githubusercontent.com/INTEL-QUEEN/Media/main/INTEL-QUEEN.jpg",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "Intel-Queen", "Intel-Queen","Intel-Queen","theme bot","multi device"],
+  "logo": "https://raw.githubusercontent.com/SecktorBot/Brandimages/main/logos/SocialLogo%201.png",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "SecktorBot", "Secktor","SecktorMD","theme bot","multi device"],
   "success_url": "/",
   "stack": "container",
 "env": {
@@ -16,7 +16,7 @@
     },
    "THUMB_IMAGE": {
     "description": "THUMBNAIL for bot.",
-     "value": "https://raw.githubusercontent.com/INTEL-QUEEN/Media/main/INTEL-QUEEN.jpg"
+     "value": "https://github.com/SecktorBot/Brandimages/blob/main/SocialLogo%201.jpg?raw=true"
     },
     "ANTI_BAD_WORD": {
     "description": "Put words here. If you want it enabled in your bot otherwise leave it blank",
@@ -52,10 +52,10 @@
   },
   "OWNER_NUMBER": {
     "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma \",\")",
-       "value": "9"
+       "value": "919628516236"
   },
    "SESSION_ID": {
-    "description": "Please put your SESSION_ID here,if you don't have visit https://replit.com/@SACHIBOT/INTEL-QUEEN "
+    "description": "Please put your SESSION_ID here,if you don't have visit https://secktorbot.herokuapp.com/session "
   },
     "OPENAI_API_KEY": {
     "description": "Please put your OPENAI api key here.Get it from beta.openai.com ",
@@ -71,8 +71,8 @@
     "description": "A secret String for Mongodb Connection.(Required)"
   },
     "THEME": {
-    "description": "Put the theme name you want to use. Avilable themes are INTEL-QUEEN and many more..",
-     "value": "INTEL-QUEEN"
+    "description": "Put the theme name you want to use. Avilable themes are SECKTOR,ZEROTWO,NEZUKO,LUFFY,GOKU and many more..",
+     "value": "SECKTOR"
   },
     "WORKTYPE": {
   "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
@@ -85,7 +85,7 @@
   },
   "PACK_INFO": {
     "description": "Put packname;authorname.",
-     "value": "SACHIBOT;Intel-Queen",
+     "value": "SamPandey001;Secktor",
      "required": false 
   }
 },
