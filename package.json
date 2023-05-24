@@ -42,7 +42,6 @@
                        "fluent-ffmpeg": "^2.1.2",
                 "youtube-s-dl": "^1.1.0-beta",
                 "@blackamda/song_video_dl": "^1.1.0",
-                "y2mate-js": "^1.0.0",
                        "g-i-s": "^2.1.6",
                        "human-readable": "^0.2.1",
                        "jimp": "^0.16.1",
