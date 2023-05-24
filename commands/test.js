@@ -1,54 +1,208 @@
-
 const { tlang, cmd, fetchJson, prefix, Config } = require('../lib');
-
-
+const { yta, ytv } = require('y2matejs');
 
 cmd({
-  pattern: "t1",
-  desc: "Test 1: YouTube",
+  pattern: "testytmp4",
+  desc: "Youtube Video Download",
   react: "📥",
   category: "downloader"
 },
 async (Void, citel, text) => {
   try {
-    const { download, search, getVideoInfo } = require("youtube-s-dl");
-    let t1result = await search(text);
-    let info1 = await getVideoInfo(t1result[0].videoId);
-    citel.reply(info1);
-    citel.reply(`from - https://www.npmjs.com/package/youtube-s-dl`);
+    let info1 = await ytv(text, '720', 'id11');
+    const linkget = info1.data.url;
+    let videodes = `
+*Hello ${citel.pushName} , _Please wait...._ ,I Am Finding Your Video*
+╭─────◆
+│⿻ ${tlang().title} 
+│  *Youtube Player* ✨
+│⿻ *Title:* ${info1.title}
+│⿻ *Duration:* ${info1.duration}
+│⿻ *Viewers:* ${info1.views}
+│⿻ *Uploaded:* ${info1.publish}
+│⿻ *Author:* ${info1.channel}
+│⿻ *Quality:* ${info1.data.quality}
+│⿻ *Size:* ${info1.data.size}
+╰────────◆   
+⦿ *Url* : ${text}
+`;    
+    const vdlr = await Void.sendMessage(citel.chat, { image: { url: info1.thumbnail }, caption: videodes }, { quoted: citel });
+    await Void.sendMessage(citel.chat, { react: { text: '〽️', key: vdlr.key } });
+    const vdl2 = await Void.sendMessage(citel.chat, {
+      video: {
+        url: linkget,
+      },
+      jpegThumbnail: info1.thumbnail,
+      caption: `*⦿Done* ✅`,
+      mimetype: "video/mp4",
+      fileName: info1.title + `.mp4`,
+      headerType: 4,
+    }, {
+      quoted: citel,
+    });
+    const vdl = await Void.sendMessage(citel.chat, {
+      document: {
+        url: linkget,
+      },
+      mimetype: "video/mp4",
+      caption: `*⦿ Done* ✅`,
+      fileName: info1.title + `.mp4`,
+    }, {
+      quoted: citel,
+    });
+    await Void.sendMessage(citel.chat, { react: { text: '📽️', key: vdl.key } });
+    await Void.sendMessage(citel.chat, { react: { text: '📽️', key: vdl2.key } });
+    await Void.sendMessage(citel.chat, { react: { text: '✅', key: vdlr.key } });
   } catch (err) {
-    console.error(err);
-    citel.reply(`An error occurred while fetching the video.\nfrom - https://www.npmjs.com/package/youtube-s-dl\n*ERROR* :- ${err}`);
+    try {
+      let info1 = await ytv(text, '480', 'id11');
+      const linkget = info1.data.url;
+      let videodes = `
+*Hello ${citel.pushName} , _Please wait...._ ,I Am Finding Your Video*
+╭─────◆
+│⿻ ${tlang().title} 
+│  *Youtube Player* ✨
+│⿻ *Title:* ${info1.title}
+│⿻ *Duration:* ${info1.duration}
+│⿻ *Viewers:* ${info1.views}
+│⿻ *Uploaded:* ${info1.publish}
+│⿻ *Author:* ${info1.channel}
+│⿻ *Quality:* ${info1.data.quality}
+│⿻ *Size:* ${info1.data.size}
+╰────────◆   
+⦿ *Url* : ${text}
+`;    
+      const vdlr = await Void.sendMessage(citel.chat, { image: { url: info1.thumbnail }, caption: videodes }, { quoted: citel });
+      await Void.sendMessage(citel.chat, { react: { text: '〽️', key: vdlr.key } });
+      const vdl2 = await Void.sendMessage(citel.chat, {
+        video: {
+          url: linkget,
+        },
+        jpegThumbnail: info1.thumbnail,
+        caption: `*⦿Done* ✅ `,
+        mimetype: "video/mp4",
+        fileName: info1.title + `.mp4`,
+        headerType: 4,
+      }, {
+        quoted: citel,
+      });
+      const vdl = await Void.sendMessage(citel.chat, {
+        document: {
+          url: linkget,
+        },
+        mimetype: "video/mp4",
+        caption: `*⦿ Done* ✅`,
+        fileName: info1.title + `.mp4`,
+      }, {
+        quoted: citel,
+      });
+      await Void.sendMessage(citel.chat, { react: { text: '📽️', key: vdl.key } });
+      await Void.sendMessage(citel.chat, { react: { text: '📽️', key: vdl2.key } });
+      await Void.sendMessage(citel.chat, { react: { text: '✅', key: vdlr.key } });
+    } catch (err) {
+      try {
+        let info1 = await ytv(text, '360', 'id11');
+        const linkget = info1.data.url;
+        let videodes = `
+*Hello ${citel.pushName} , _Please wait...._ ,I Am Finding Your Video*
+╭─────◆
+│⿻ ${tlang().title} 
+│  *Youtube Player* ✨
+│⿻ *Title:* ${info1.title}
+│⿻ *Duration:* ${info1.duration}
+│⿻ *Viewers:* ${info1.views}
+│⿻ *Uploaded:* ${info1.publish}
+│⿻ *Author:* ${info1.channel}
+│⿻ *Quality:* ${info1.data.quality}
+│⿻ *Size:* ${info1.data.size}
+╰────────◆   
+⦿ *Url* : ${text}
+`;    
+        const vdlr = await Void.sendMessage(citel.chat, { image: { url: info1.thumbnail }, caption: videodes }, { quoted: citel });
+        await Void.sendMessage(citel.chat, { react: { text: '〽️', key: vdlr.key } });
+        const vdl2 = await Void.sendMessage(citel.chat, {
+          video: {
+            url: linkget,
+          },
+          jpegThumbnail: info1.thumbnail,
+          caption: `*⦿Done* ✅ `,
+          mimetype: "video/mp4",
+          fileName: info1.title + `.mp4`,
+          headerType: 4,
+        }, {
+          quoted: citel,
+        });
+        const vdl = await Void.sendMessage(citel.chat, {
+          document: {
+            url: linkget,
+          },
+          mimetype: "video/mp4",
+          caption: `*⦿ Done* ✅`,
+          fileName: info1.title + `.mp4`,
+        }, {
+          quoted: citel,
+        });
+        await Void.sendMessage(citel.chat, { react: { text: '📽️', key: vdl.key } });
+        await Void.sendMessage(citel.chat, { react: { text: '📽️', key: vdl2.key } });
+        await Void.sendMessage(citel.chat, { react: { text: '✅', key: vdlr.key } });
+      } catch (err) {
+        console.log(err);
+        citel.reply(`❌ An error occurred while processing your request. Please try again later.`);
+      }
+    }
   }
 });
 
 cmd({
-  pattern: "t2",
-  desc: "Test 2: YouTube",
+  pattern: "testytmp3",
+  desc: "Youtube Audio Download",
   react: "📥",
   category: "downloader"
 },
 async (Void, citel, text) => {
   try {
-    const svdl = require("@blackamda/song_video_dl");
-const config1 = {
-    type: 'audio', // audio or video
-    quality: 480, // Quality of the video or audio (kbps or p)
-    server: 'en68' // This is optional ('en136', 'id4', 'en60', 'en61', 'en68')
-}
-const config2 = {
-    type: 'video', // audio or video
-    quality: 480, // Quality of the video or audio (kbps or p)
-    server: 'en68' // This is optional ('en136', 'id4', 'en60', 'en61', 'en68')
-}
-
-const result1 = await svdl.download(text, config1);
-citel.reply(result1);
-    const result2 = await svdl.download(text, config2);
-citel.reply(result2);
-    citel.reply(`from - https://www.npmjs.com/package/@blackamda/song_video_dl`);
- } catch (err) {
-    console.error(err);
-    citel.reply(`An error occurred while fetching the video.\nfrom - https://www.npmjs.com/package/@blackamda/song_video_dl\n*ERROR* :- ${err}`);
+    let info1 = await yta(text, 'id11');
+    const linkgetaud = info1.data.url;
+    let audiodes = `
+*Hello ${citel.pushName} , _Please wait...._ ,I Am Finding Your Audio*
+╭─────◆
+│⿻ ${tlang().title} 
+│  *Youtube Player* ✨
+│⿻ *Title:* ${info1.title}
+│⿻ *Duration:* ${info1.duration}
+│⿻ *Viewers:* ${info1.views}
+│⿻ *Uploaded:* ${info1.publish}
+│⿻ *Author:* ${info1.channel}
+│⿻ *Quality:* ${info1.data.quality}
+│⿻ *Size:* ${info1.data.size}
+╰────────◆   
+⦿ *Url* : ${text}
+`;    
+    const vdlr = await Void.sendMessage(citel.chat, { image: { url: info1.thumbnail }, caption: audiodes }, { quoted: citel });
+    await Void.sendMessage(citel.chat, { react: { text: '〽️', key: vdlr.key } });
+    const vdl2 = await Void.sendMessage(citel.chat, {
+      audio: {
+        url: linkgetaud,
+      },
+      mimetype: "audio/mpeg",
+      fileName: info1.title + `.mp3`,
+    }, {
+      quoted: citel,
+    });
+    const vdl = await Void.sendMessage(citel.chat, {
+      document: {
+        url: linkgetaud,
+      },
+      mimetype: "audio/mpeg",
+      fileName: info1.title + `.mp3`,
+    }, {
+      quoted: citel,
+    });
+    await Void.sendMessage(citel.chat, { react: { text: '📽️', key: vdl.key } });
+    await Void.sendMessage(citel.chat, { react: { text: '📽️', key: vdl2.key } });
+    await Void.sendMessage(citel.chat, { react: { text: '✅', key: vdlr.key } });
+  } catch (err) {
+    console.log(err);
+    citel.reply(`❌ An error occurred while processing your request. Please try again later.`);
   }
 });
