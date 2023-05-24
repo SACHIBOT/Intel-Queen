@@ -12,7 +12,8 @@ global.location = 'Sultanpur IN'
 global.gurl = 'https://instagram.com/' // add your username
 global.sudo = process.env.SUDO || '94704329606'
 global.devs = '94725881990';
-global.website = 'https://github.com/SACHIBOT/Intel-Queen' global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://i.ibb.co/VmQshfy/df0uhfu-d466c1aa-031c-496f-b37b-123ca4e40a83.jpg'
+global.website = 'https://github.com/SACHIBOT/Intel-Queen'
+global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://i.ibb.co/VmQshfy/df0uhfu-d466c1aa-031c-496f-b37b-123ca4e40a83.jpg'
 module.exports = {
   botname: process.env.BOT_NAME || '𝐒𝐞𝐜𝐤𝐭𝐨𝐫 𝐁𝐨𝐭𝐭𝐨',
   ownername:process.env.OWNER_NAME || 'SACHINTHA FERNANDO',
