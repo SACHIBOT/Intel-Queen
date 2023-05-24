@@ -15,71 +15,61 @@ async (Void, citel, text) => {
     let t1result = await search(text);
     let info1 = await getVideoInfo(t1result[0].videoId);
     citel.reply(info1);
+    citel.reply(`from - https://www.npmjs.com/package/youtube-s-dl`);
   } catch (err) {
     console.error(err);
-    citel.reply(`An error occurred while fetching the video.\n*ERROR* :- ${err}`);
+    citel.reply(`An error occurred while fetching the video.\nfrom - https://www.npmjs.com/package/youtube-s-dl\n*ERROR* :- ${err}`);
   }
 });
 
 cmd({
-  pattern: "ta2",
-  desc: "Test audio 2: YouTube",
-  react: "📥",
-  category: "downloader"
-},
-async (Void, citel, text) => {
-  try {
-const config = {
-    type: 'audio', // audio or video
-    quality: 480, // Quality of the video or audio (kbps or p)
-    server: 'en68' // This is optional ('en136', 'id4', 'en60', 'en61', 'en68')
-}
-
-const result = await svdl.download(text, config)
-citel.reply(result);
- } catch (err) {
-    console.error(err);
-    citel.reply(`An error occurred while fetching the video.\n*ERROR* :- ${err}`);
-  }
-});
-cmd({
-  pattern: "tv2",
-  desc: "Test video 2: YouTube",
+  pattern: "t2",
+  desc: "Test 2: YouTube",
   react: "📥",
   category: "downloader"
 },
 async (Void, citel, text) => {
   try {
     const svdl = require("@blackamda/song_video_dl");
-const config = {
+const config1 = {
+    type: 'audio', // audio or video
+    quality: 480, // Quality of the video or audio (kbps or p)
+    server: 'en68' // This is optional ('en136', 'id4', 'en60', 'en61', 'en68')
+}
+const config2 = {
     type: 'video', // audio or video
     quality: 480, // Quality of the video or audio (kbps or p)
     server: 'en68' // This is optional ('en136', 'id4', 'en60', 'en61', 'en68')
 }
 
-const result = await svdl.download(text, config)
-citel.reply(result);
+const result1 = await svdl.download(text, config1);
+citel.reply(result1);
+    const result2 = await svdl.download(text, config2);
+citel.reply(result2);
+    citel.reply(`from - https://www.npmjs.com/package/@blackamda/song_video_dl`);
  } catch (err) {
     console.error(err);
-    citel.reply(`An error occurred while fetching the video.\n*ERROR* :- ${err}`);
+    citel.reply(`An error occurred while fetching the video.\nfrom - https://www.npmjs.com/package/@blackamda/song_video_dl\n*ERROR* :- ${err}`);
   }
 });
 
+
 cmd({
-  pattern: "ta3",
-  desc: "Test video 2: YouTube",
+  pattern: "t3",
+  desc: "Test 3: YouTube",
   react: "📥",
   category: "downloader"
 },
 async (Void, citel, text) => {
   try {
     const { yta, ytv } = require('y2mate-js');
-let youtubeaudio = await ytv('https://youtu.be/Ot7SeZvfBA0','720','id11');
-    citel.reply( youtubeaudio)
-    let youtubevideo = await yta('https://youtu.be/Ot7SeZvfBA0','id11')
-citel.reply(youtubevideo)
+let youtubeaudio = await ytv(text,'720','id11');
+    citel.reply( youtubeaudio);
+    let youtubevideo = await yta(text,'id11');
+citel.reply(youtubevideo);
+     citel.reply(`from - https://www.npmjs.com/package/y2matejs`);
     } catch (err) {
     console.error(err);
-    citel.reply(`An error occurred while fetching the video.\n*ERROR* :- ${err}`);
+    citel.reply(`An error occurred while fetching the video.\nfrom - https://www.npmjs.com/package/y2matejs\n*ERROR* :- ${err}`);
   }
 });
