@@ -52,24 +52,3 @@ citel.reply(result2);
     citel.reply(`An error occurred while fetching the video.\nfrom - https://www.npmjs.com/package/@blackamda/song_video_dl\n*ERROR* :- ${err}`);
   }
 });
-
-
-cmd({
-  pattern: "t3",
-  desc: "Test 3: YouTube",
-  react: "📥",
-  category: "downloader"
-},
-async (Void, citel, text) => {
-  try {
-    const { yta, ytv } = require('y2mate-js');
-let youtubeaudio = await ytv(text,'720','id11');
-    citel.reply( youtubeaudio);
-    let youtubevideo = await yta(text,'id11');
-citel.reply(youtubevideo);
-     citel.reply(`from - https://www.npmjs.com/package/y2matejs`);
-    } catch (err) {
-    console.error(err);
-    citel.reply(`An error occurred while fetching the video.\nfrom - https://www.npmjs.com/package/y2matejs\n*ERROR* :- ${err}`);
-  }
-});
