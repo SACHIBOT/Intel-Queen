@@ -1,6 +1,6 @@
   <p align="center">  
   <a href="https://github.com/SACHIBOT">
-    <img alt="secktor docs" height="300" src="hhttps://raw.githubusercontent.com/INTEL-QUEEN/Media/main/INTEL-QUEEN.jpg">
+    <img alt="Intel-Queen docs" height="300" src="hhttps://raw.githubusercontent.com/INTEL-QUEEN/Media/main/INTEL-QUEEN.jpg">
     <h1 align="center">Intel-Queen Whatsapp bot</h1>
   </a>
 </p>
