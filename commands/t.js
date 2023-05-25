@@ -1,4 +1,5 @@
 const { youtubeDl2 } = require('@bochilteam/scraper');
+const { tlang, botpic, cmd, prefix, runtime, Config, formatp, fetchJson } = require('../lib');
 
 cmd({
   pattern: "test1",
