@@ -1,4 +1,4 @@
-const { youtubeDl2 } = require('@bochilteam/scraper');
+const { youtubeDl2 } = require('@bochilteam/scraper-sosmed');
 const { tlang, botpic, cmd, prefix, runtime, Config, formatp, fetchJson } = require('../lib');
 
 cmd({
