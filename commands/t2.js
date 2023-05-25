@@ -1,4 +1,4 @@
-const { youtubeDL2 } = require('@bochilteam/scraper');
+
 const { tlang, botpic, cmd, prefix, runtime, Config, formatp } = require('../lib');
 
 cmd({
@@ -10,6 +10,7 @@ cmd({
 },
 async (Void, citel, text) => {
   try {
+    const { youtubeDL2 } = require('@bochilteam/scraper');
     const data = await youtubeDL2(text);
     console.log(data);
     citel.reply(data); // JSON
