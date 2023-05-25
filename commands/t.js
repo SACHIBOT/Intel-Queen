@@ -20,9 +20,7 @@ async (Void, citel, text) => {
     console.log(Object.keys(data.audio));
     citel.reply(Object.keys(data.audio)); // List of resolution/quality
     
-    const url = await data.video['720p'].download(); // Download '720p' video
-    console.log(url);
-    citel.reply(url); // string
+
   } catch (err) {
     console.log(err);
     citel.reply(`❌ Got an error: ${err}`);
