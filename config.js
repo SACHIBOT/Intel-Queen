@@ -22,7 +22,7 @@ module.exports = {
   auto_read_status : process.env.AUTO_READ_STATUS || 'false',
   packname: process.env.PACK_INFO.split(";")[1] || 'Name',
   autoreaction: process.env.AUTO_REACTION || 'off',
-  antibadword : process.env.ANTI_BAD_WORD || 'nobadwordokey',
+  antibadword : process.env.ANTI_BAD_WORD || 'sdfghjsdfghjklkjhgfdsdfghjkl;lkjhgfdsdfghjklkjhvcftyuikbvfrtyuj',
   alwaysonline: process.env.ALWAYS_ONLINE || 'false',
   antifake : process.env.FAKE_COUNTRY_CODE || '',
   readmessage: process.env.READ_MESSAGE || false,
